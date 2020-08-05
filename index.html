@@ -7,8 +7,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
       <style>
         #mapid {
-            width: 512px;
-            height: 512px;
+            width: 100%;
+            height: 100%;
             border: 1px solid #ccc;
         }
 
@@ -21,7 +21,7 @@
           function init() {
             // create map and set center and zoom level
             var map = new L.map('mapid');
-            map.setView([47.000,-120.554],13);
+            map.setView([-37.814,144.96332],13);
             
             var mapboxTileUrl = 'https://api.mapbox.com/styles/v1/scotthongwesds/cjglfo5eg00092slnpny84mjt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2NvdHRob25nd2VzZHMiLCJhIjoiY2pnbGZuZGpjMHl3czJ3cWo4amE0djMycCJ9.VkGbHm5mkzMA7MwfFBa2XQ';
             
@@ -32,7 +32,6 @@
         </script>
       </head>
       <body onload="init()"> 
-        <h1 id="title">Favorite restaurants</h1>
         <div id="mapid"></div>   
       </body>
     </html>
